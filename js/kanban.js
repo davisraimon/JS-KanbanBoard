@@ -28,6 +28,14 @@ const create_item = () => {
 
   let save_btn = document.createElement('button');
   save_btn.innerHTML = 'Save'
+  save_btn.addEventListener("click", (value)=>{
+    error.innerHTML = '';
+    if(input.value!=''){
+      order = order + 1
+      item.innerHTML = input.value
+      adding = false
+    }
+  })
 };
 
 document.querySelectorAll('.drop').forEach(element => {
